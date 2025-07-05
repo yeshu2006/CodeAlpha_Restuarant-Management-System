@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Reservations</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Table</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for reservation in reservations %}
+        <tr>
+            <td>{{ reservation.name }}</td>
+            <td>{{ reservation.phone }}</td>
+            <td>{{ reservation.table }}</td>
+            <td>{{ reservation.reservation_time }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
